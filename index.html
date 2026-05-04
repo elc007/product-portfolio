@@ -5,62 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Erick Costa - Product Portfolio</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background: #020617;
       color: #ffffff;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 48px;
       margin-bottom: 10px;
     }
 
     h2 {
-      margin-top: 40px;
+      margin-top: 60px;
+      font-size: 28px;
     }
 
     p {
-      color: #cbd5f5;
+      color: #cbd5e1;
       line-height: 1.6;
     }
 
-    .card {
-      background: #0f172a;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
+    .highlight {
+      color: #38bdf8;
     }
 
     .metrics {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      margin-top: 40px;
     }
 
     .metric {
       flex: 1;
-      min-width: 200px;
-      background: #0f172a;
-      padding: 20px;
-      border-radius: 12px;
+      min-width: 220px;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #1e293b;
     }
 
     .metric h3 {
-      font-size: 32px;
+      font-size: 36px;
       margin: 0;
     }
 
+    .card {
+      background: #0f172a;
+      padding: 25px;
+      border-radius: 16px;
+      margin-top: 20px;
+      border: 1px solid #1e293b;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .footer {
-      margin-top: 40px;
+      margin-top: 60px;
       font-size: 14px;
       color: #94a3b8;
     }
@@ -69,60 +98,92 @@
       color: #38bdf8;
       text-decoration: none;
     }
+
+    .tag {
+      display: inline-block;
+      background: #0f172a;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-right: 8px;
+      margin-top: 10px;
+      border: 1px solid #1e293b;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
+    <!-- HEADER -->
     <h1>Erick Costa</h1>
     <p>
-      Product Manager focused on SaaS, integrations, and building scalable solutions that reduce complexity and drive real impact.
+      Product Manager focused on <span class="highlight">SaaS, integrations, and scalable systems</span>.
+      I turn complex workflows into structured, data-driven product solutions.
     </p>
+
+    <div>
+      <span class="tag">B2B SaaS</span>
+      <span class="tag">APIs & Integrations</span>
+      <span class="tag">Product Strategy</span>
+    </div>
 
     <!-- METRICS -->
     <div class="metrics">
       <div class="metric">
         <h3>50%</h3>
-        <p>Reduced bug resolution SLA, improving reliability and customer satisfaction.</p>
+        <p>Reduction in bug resolution SLA, improving product reliability and customer satisfaction.</p>
       </div>
 
       <div class="metric">
         <h3>70%</h3>
-        <p>Reduced cargo release time through automated customs clearance.</p>
+        <p>Reduction in cargo release time through automation in customs clearance.</p>
       </div>
     </div>
 
-    <!-- CASES -->
+    <!-- CASE STUDIES -->
     <h2>Case Studies</h2>
 
+    <div class="grid">
+      <div class="card">
+        <h3>SAP + SaaS Integration</h3>
+        <p>
+          Led end-to-end integration between ERP and SaaS systems, ensuring data consistency across logistics, orders, and finance.
+        </p>
+        <p><strong>Focus:</strong> APIs, data reliability, cross-team dependencies</p>
+      </div>
+
+      <div class="card">
+        <h3>OCR + AI Data Extraction</h3>
+        <p>
+          Implemented OCR and AI workflows to extract data from unstructured documents, reducing manual effort and increasing efficiency.
+        </p>
+        <p><strong>Focus:</strong> Automation, AI workflows, process optimization</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT THINKING -->
+    <h2>How I Think About Product</h2>
+
     <div class="card">
-      <h3>SAP + SaaS Integration</h3>
+      <p><strong>Strategy:</strong> Align product decisions with business impact and measurable outcomes.</p>
+      <p><strong>Execution:</strong> Manage dependencies, risks, and delivery in complex environments.</p>
+      <p><strong>Analytics:</strong> Use data and user behavior to guide prioritization and improvements.</p>
+    </div>
+
+    <!-- CTA -->
+    <h2>Let’s Connect</h2>
+
+    <div class="card">
+      <p>I’m always open to discussing product challenges, SaaS, and opportunities.</p>
       <p>
-        Led integration between ERP and SaaS systems, improving data consistency and operational efficiency.
+        👉 <a href="https://linkedin.com/in/erick-lima-costa">LinkedIn</a><br/>
+        👉 <a href="mailto:elc007@gmail.com">elc007@gmail.com</a>
       </p>
     </div>
 
-    <div class="card">
-      <h3>OCR + AI Data Extraction</h3>
-      <p>
-        Implemented OCR and AI workflows to extract data from unstructured documents and reduce manual effort.
-      </p>
-    </div>
-
-    <!-- THINKING -->
-    <h2>Product Thinking</h2>
-
-    <div class="card">
-      <p><strong>Strategy:</strong> Aligning business goals with product execution.</p>
-      <p><strong>Execution:</strong> Managing risks, dependencies, and delivery.</p>
-      <p><strong>Analytics:</strong> Using data to guide decisions.</p>
-    </div>
-
-    <!-- CONTACT -->
     <div class="footer">
-      <p>LinkedIn: <a href="https://linkedin.com/in/erick-lima-costa">linkedin.com/in/erick-lima-costa</a></p>
-      <p>Email: elc007@gmail.com</p>
+      <p>© Erick Costa — Product Portfolio</p>
     </div>
 
   </div>
