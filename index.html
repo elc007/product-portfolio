@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Erick Costa - Product Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -22,70 +21,26 @@
       padding: 60px 20px;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+    h1 { font-size: 48px; }
+    h2 { margin-top: 60px; font-size: 28px; }
+    p { color: #cbd5e1; line-height: 1.6; }
 
-    h2 {
-      margin-top: 60px;
-      font-size: 28px;
-    }
+    .highlight { color: #38bdf8; }
 
-    p {
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-
-    .highlight {
-      color: #38bdf8;
-    }
-
-    .metrics {
-      display: flex;
+    .metrics, .grid {
+      display: grid;
       gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 40px;
     }
 
-    .metric {
-      flex: 1;
-      min-width: 220px;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid #1e293b;
-    }
-
-    .metric h3 {
-      font-size: 36px;
-      margin: 0;
-    }
+    .metrics { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 
     .card {
       background: #0f172a;
       padding: 25px;
       border-radius: 16px;
-      margin-top: 20px;
       border: 1px solid #1e293b;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: #38bdf8;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      margin-top: 20px;
     }
 
     .footer {
@@ -94,10 +49,7 @@
       color: #94a3b8;
     }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
+    a { color: #38bdf8; text-decoration: none; }
 
     .tag {
       display: inline-block;
@@ -130,14 +82,14 @@
 
     <!-- METRICS -->
     <div class="metrics">
-      <div class="metric">
-        <h3>50%</h3>
-        <p>Reduction in bug resolution SLA, improving product reliability and customer satisfaction.</p>
+      <div class="card">
+        <h2>50%</h2>
+        <p>Reduced bug resolution SLA, improving reliability and customer satisfaction.</p>
       </div>
 
-      <div class="metric">
-        <h3>70%</h3>
-        <p>Reduction in cargo release time through automation in customs clearance.</p>
+      <div class="card">
+        <h2>70%</h2>
+        <p>Reduced cargo release time through automated customs clearance.</p>
       </div>
     </div>
 
@@ -147,77 +99,61 @@
     <div class="grid">
       <div class="card">
         <h3>ERP + SaaS Integration</h3>
-        <p>
-          Led end-to-end integration between ERP (SAP, Protheus) and SaaS systems, ensuring data consistency across logistics, orders, and finance.
-        </p>
-        <p><strong>Focus:</strong> APIs, data reliability, cross-team dependencies</p>
+        <p>Integration between ERPs (SAP, Protheus) and SaaS improving data consistency and efficiency.</p>
       </div>
-
-      <h2>Deep Dive: SAP + SaaS Integration</h2>
-
-<div class="card">
-  <p><strong>Problem:</strong> Data inconsistency across ERP and SaaS systems created operational inefficiencies and manual rework.</p>
-
-  <p><strong>Context:</strong> Multiple systems acting as partial sources of truth, with no clear ownership of data.</p>
-
-  <p><strong>Approach:</strong> Defined a single source of truth, structured API contracts, and mapped end-to-end workflows.</p>
-
-  <p><strong>Key Decision:</strong> Prioritized data consistency over speed of delivery to ensure long-term scalability.</p>
-
-  <p><strong>Trade-offs:</strong> Slower initial rollout vs. higher reliability and reduced future rework.</p>
-
-  <p><strong>Outcome:</strong> Improved data accuracy, reduced manual operations, and increased system trust.</p>
-</div>
-
-      <h2>Product Metrics I Care About</h2>
-
-<div class="card">
-  <p><strong>Activation:</strong> How quickly users reach first value</p>
-  <p><strong>Adoption:</strong> Feature usage and engagement patterns</p>
-  <p><strong>Reliability:</strong> SLA, error rates, and system stability</p>
-  <p><strong>Efficiency:</strong> Reduction of manual work and process time</p>
-</div>
-
-      <h2>Product Principles</h2>
-
-<div class="card">
-  <p>• Simplify before scaling</p>
-  <p>• Data before opinion</p>
-  <p>• Solve root causes, not symptoms</p>
-  <p>• Optimize for long-term value, not short-term output</p>
-</div>
 
       <div class="card">
         <h3>OCR + AI Data Extraction</h3>
-        <p>
-          Managed OCR and AI workflows Implementation to extract data from unstructured documents, reducing manual effort and increasing efficiency.
-        </p>
-        <p><strong>Focus:</strong> Automation, AI workflows, process optimization</p>
+        <p>Automation of unstructured data extraction using OCR and AI.</p>
       </div>
     </div>
 
-    <!-- PRODUCT THINKING -->
-    <h2>How I Think About Product</h2>
+    <!-- DEEP DIVE -->
+    <h2>Deep Dive Case — SAP + SaaS Integration</h2>
 
     <div class="card">
-      <p><strong>Strategy:</strong> Align product decisions with business impact and measurable outcomes.</p>
-      <p><strong>Execution:</strong> Manage dependencies, risks, and delivery in complex environments.</p>
-      <p><strong>Analytics:</strong> Use data and user behavior to guide prioritization and improvements.</p>
+      <p><strong>Context:</strong> Systems not integrated properly.</p>
+      <p><strong>Problem:</strong> Data inconsistency and manual rework.</p>
+      <p><strong>Goal:</strong> Reliable and scalable integration.</p>
+      <p><strong>Hypothesis:</strong> Structured data flows improve efficiency.</p>
+      <p><strong>Approach:</strong> APIs, workflows, validation.</p>
+      <p><strong>Decision:</strong> Prioritize consistency over speed.</p>
+      <p><strong>Trade-offs:</strong> Slower delivery vs scalability.</p>
+      <p><strong>Outcome:</strong> Improved reliability and efficiency.</p>
     </div>
 
-    <!-- CTA -->
-    <h2>Let’s Connect</h2>
+    <!-- PRODUCT METRICS -->
+    <h2>Product Metrics I Care About</h2>
 
     <div class="card">
-      <p>I’m always open to discussing product challenges, SaaS, and opportunities.</p>
-      <p>
-        👉 <a href="https://linkedin.com/in/erick-lima-costa">LinkedIn</a><br/>
-        👉 <a href="mailto:elc007@gmail.com">elc007@gmail.com</a>
-      </p>
+      <p>Activation, Adoption, Reliability, Efficiency</p>
     </div>
 
+    <!-- PRINCIPLES -->
+    <h2>Product Principles</h2>
+
+    <div class="card">
+      <p>• Simplify before scaling</p>
+      <p>• Data before opinion</p>
+      <p>• Solve root causes</p>
+    </div>
+
+    <!-- PR FAQ -->
+    <h2>PR/FAQ — AI Document Automation</h2>
+
+    <div class="card">
+      <p><strong>Press Release:</strong> AI-powered document automation to reduce manual work and increase efficiency.</p>
+      <p><strong>Customer:</strong> Operations-heavy companies.</p>
+      <p><strong>Benefit:</strong> Faster processing and better reliability.</p>
+      <p><strong>Metrics:</strong> Time reduction, accuracy, adoption.</p>
+      <p><strong>Risks:</strong> Edge cases and data quality.</p>
+      <p><strong>Vision:</strong> Fully automated workflows.</p>
+    </div>
+
+    <!-- CONTACT -->
     <div class="footer">
-      <p>© Erick Costa — Product Portfolio</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/erick-lima-costa">linkedin.com/in/erick-lima-costa</a></p>
+      <p>Email: elc007@gmail.com</p>
     </div>
 
   </div>
