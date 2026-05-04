@@ -111,16 +111,47 @@
     <!-- DEEP DIVE -->
     <h2>Deep Dive Case — SAP + SaaS Integration</h2>
 
-    <div class="card">
-      <p><strong>Context:</strong> Systems not integrated properly.</p>
-      <p><strong>Problem:</strong> Data inconsistency and manual rework.</p>
-      <p><strong>Goal:</strong> Reliable and scalable integration.</p>
-      <p><strong>Hypothesis:</strong> Structured data flows improve efficiency.</p>
-      <p><strong>Approach:</strong> APIs, workflows, validation.</p>
-      <p><strong>Decision:</strong> Prioritize consistency over speed.</p>
-      <p><strong>Trade-offs:</strong> Slower delivery vs scalability.</p>
-      <p><strong>Outcome:</strong> Improved reliability and efficiency.</p>
-    </div>
+<div class="card">
+
+  <p><strong>Context</strong><br/>
+  The company relied on both SAP (ERP) and a SaaS platform to manage operations across orders, logistics, and finance. However, these systems were not properly integrated.</p>
+
+  <p><strong>Problem</strong><br/>
+  Data inconsistencies between systems led to manual reconciliation, operational delays, and low trust in system outputs.</p>
+
+  <p><strong>Goal</strong><br/>
+  Create a reliable and scalable integration layer that ensures data consistency and reduces manual intervention.</p>
+
+  <p><strong>Hypothesis</strong><br/>
+  If we establish a single source of truth and enforce structured data flows between systems, we can reduce operational inefficiencies and improve reliability.</p>
+
+  <p><strong>Approach</strong><br/>
+  • Mapped end-to-end workflows across systems<br/>
+  • Defined ownership of data (source of truth)<br/>
+  • Designed API contracts with validation rules<br/>
+  • Introduced monitoring and error handling mechanisms</p>
+
+  <p><strong>Key Decisions</strong><br/>
+  Prioritized data consistency and reliability over speed of delivery, ensuring long-term scalability.</p>
+
+  <p><strong>Trade-offs</strong><br/>
+  • Slower initial delivery vs. long-term system stability<br/>
+  • Higher upfront complexity vs. reduced future maintenance</p>
+
+  <p><strong>Execution</strong><br/>
+  • Delivered integration in incremental phases<br/>
+  • Managed cross-team dependencies<br/>
+  • Continuously monitored edge cases and failures</p>
+
+  <p><strong>Metrics & Impact</strong><br/>
+  • Reduced manual reconciliation efforts<br/>
+  • Increased data consistency across systems<br/>
+  • Improved operational efficiency and reliability</p>
+
+  <p><strong>What I’d Improve</strong><br/>
+  In a next iteration, I would invest earlier in observability and real-time monitoring to detect inconsistencies faster.</p>
+
+</div>
 
     <!-- PRODUCT METRICS -->
     <h2>Product Metrics I Care About</h2>
